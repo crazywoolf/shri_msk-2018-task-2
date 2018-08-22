@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nifty Modal Window Effects</title>
+      <link rel="stylesheet" type="text/css" href="css/reset.css" />
+      <link rel="stylesheet" type="text/css" href="css/md-style.css" />
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+      <!--Плагин, чтобы не писать браузерные префиксы
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
+   </head>
+   <body>
+      <!--Модальные окна-->
+      <div class="md-modal md-effect" id="modal-floor">
+         <div class="md-content floor">
+            <div class="md-panel floor">
+               <div class="md-device-info">
+                  <div class="md-device-name">
+                     Xiaomi Warm Floor
+                  </div>
+                  <div class="md-device-status">
+                     Включено
+                  </div>
+                  <div class="md-icon temp">
+                     <div id="floor-temp">+23</div>
+                     <img src="css/assets/icon_temperature_2@2x.png">
+                  </div>
+               </div>
+               <div class="floor-control">
+                  <div class="control"></div>
+               </div>
+            </div>
+            <div>
+               <button class="md-btn">Применить</button>
+               <button class="md-close md-btn">Закрыть</button>
+            </div>
+         </div>
+      </div>
+      <div class="md-modal md-effect" id="modal-temp">
+         <div class="md-content temp">
+            <div class="md-panel">
+               <div class="md-device-info">
+                  <div class="md-device-name">
+                     Elgato Eve Degree Connected
+                  </div>
+                  <div class="md-device-status">
+                     Включено
+                  </div>
+                  <div class="md-icon temp">
+                     <div>+24</div>
+                     <img src="css/assets/icon_temperature_2@2x.png">
+                  </div>
+               </div>
+               <div class="md-nav">
+                  <button class="md-nav-btn">Вручную</button>
+                  <button class="md-nav-btn">Холодно</button>
+                  <button class="md-nav-btn">Тепло</button>
+                  <button class="md-nav-btn">Жарко</button>
+               </div>
+               <div class="md-indicate-container">
+                  <div class="md-indicate">
+                     <input type="range" min="0" max="100" value="50" class="slider temp" id="myRange">
+                     <span>-10</span>
+                     <span>+30</span>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <button class="md-btn">Применить</button>
+               <button class="md-close md-btn">Закрыть</button>
+            </div>
+         </div>
+      </div>
+      <div class="md-modal md-effect" id="modal-light">
+         <div class="md-content">
+            <div class="md-panel">
+               <div class="md-device-info">
+                  <div class="md-device-name">
+                     Xiaomi Yeelight LED Smart Bulb
+                  </div>
+                  <div class="md-device-status">
+                     Включится в 17:00
+                  </div>
+                  <div class="md-icon light"><img src="css/assets/icon_sun@2x.png"></div>
+               </div>
+               <div class="md-nav">
+                  <button class="md-nav-btn">Вручную</button>
+                  <button class="md-nav-btn">Дневной свет</button>
+                  <button class="md-nav-btn">Вечерний свет</button>
+                  <button class="md-nav-btn">Рассвет</button>
+               </div>
+               <div class="md-indicate-container">
+                  <div class="md-indicate">
+                     <input type="range" min="0" max="100" value="50" class="slider light" id="myRange">
+                     <img src="css/assets/icon_sun_min.png">
+                     <img src="css/assets/icon_sun_min@2x.png">
+                  </div>
+               </div>
+            </div>
+            <div>
+               <button class="md-btn">Применить</button>
+               <button class="md-close md-btn">Закрыть</button>
+            </div>
+         </div>
+      </div>
+      <!--Модальные окна-->
+      <!--Основной контент-->
+      <div class="container">
+         <header>
+            <nav>
+               <div id="logo"><a href="#"><img src="css/assets/y_logo@1x.png"></a></div>
+               <div class="nav-li"><a href="#">Сводка</a></div>
+               <div class="nav-li"><a href="#">Устройства</a></div>
+               <div class="nav-li"><a href="#">Сценарии</a></div>
+            </nav>
+            <div class="nav-toggle"><img src="css/assets/icon_list_m.png"><span></span></div>
+            <!--!!!!!-->
+         </header>
+         <section>
+            <div class="box">
+               <div class="box-nav">
+                  <div class="label label-main">Главное</div>
+               </div>
+               <div class="box-content main">
+                  <div class="main-info">
+                     <div class="main-hi">Привет, Геннадий!</div>
+                     <div class="main-status">Двери и окна закрыты, сигнализация включена.</div>
+                     <div class="main-weather">
+                        <div class="weather-house">
+                           <p class="weather-place">Дома</p>
+                           <p class="weather-temp">+23</p>
+                        </div>
+                        <div class="weather-window">
+                           <p class="weather-place">За окном</p>
+                           <p class="weather-temp">+19</p>
+                           <div class="weather-temp-icon"><img src="css/assets/cloud-drizzle.png"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="info-slider">
+                     <div class="arrow"><img src="css/assets/Icons/Arrow_Double/m.png"></div>
+                     <div class="items">
+                        <div class="slider-item">
+                           <div class="slider-icon">
+                              <img src="css/assets/icon_temperature@1x.png">
+                           </div>
+                           <div class="slider-device-info">
+                              <div class="slider-device-name">
+                                 Philips Cooler
+                              </div>
+                              <div class="slider-device-status">
+                                 Начнет охлаждать в 16:30
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slider-item">
+                           <div class="slider-icon">
+                              <img src="css/assets/icon_sun@1x.png">
+                           </div>
+                           <div class="slider-device-info">
+                              <div class="slider-device-name">
+                                 Xiaomi Yeelight LED Smart Build
+                              </div>
+                              <div class="slider-device-status">
+                                 Включить в 17:00
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slider-item">
+                           <div class="slider-icon">
+                              <img src="css/assets/icon_temperature@1x.png">
+                           </div>
+                           <div class="slider-device-info">
+                              <div class="slider-device-name">
+                                 Philips Cooler
+                              </div>
+                              <div class="slider-device-status">
+                                 Начнет охлаждать в 16:30
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slider-item">
+                           <div class="slider-icon">
+                              <img src="css/assets/icon_temperature@1x.png">
+                           </div>
+                           <div class="slider-device-info">
+                              <div class="slider-device-name">
+                                 Philips Cooler
+                              </div>
+                              <div class="slider-device-status">
+                                 Начнет охлаждать в 16:30
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="box">
+               <div class="box-nav">
+                  <div class="label label-screenplay">
+                     Избранные сценарии
+                  </div>
+                  <div class="screenplay-arrows">
+                     <div class="arrow-left">
+                        <img src="css/assets/Icons/Arrow_Right/left@1x.png">
+                     </div>
+                     <div class="arrow-right">
+                        <img src="css/assets/Icons/Arrow_Right/left@1x.png">
+                     </div>
+                  </div>
+               </div>
+               <div class="box-content screenplay">
+                  <div class="screenplay-slider">
+                     <div class="screenplay-slider-set">
+                        <div class="screenplay-slider-item">
+                           <div class="panel">
+                              <div class="panel-icon">
+                                 <img src="css/assets/icon_sun@1x.png">
+                              </div>
+                              <div class="panel-name">Выключить весь свет в доме и во дворе</div>
+                              <div class="panel-status"></div>
+                           </div>
+                           <div class="panel">
+                              <div class="panel-icon">
+                                 <img src="css/assets/icon_scheduled@2x.png">
+                              </div>
+                              <div class="panel-name">Я ухожу</div>
+                              <div class="panel-status"></div>
+                           </div>
+                           <div class="panel">
+                              <div class="panel-icon">
+                                 <img src="css/assets/icon_sun@1x.png">
+                              </div>
+                              <div class="panel-name">Включить свет в коридоре</div>
+                              <div class="panel-status"></div>
+                           </div>
+                           <div class="panel">
+                              <div class="panel-icon">
+                                 <img src="css/assets/icon_temperature_2@1x.png">
+                              </div>
+                              <div class="panel-name">Набрать горячую ванну</div>
+                              <div class="panel-status">Начнется в 18:00</div>
+                           </div>
+                           <div class="panel">
+                              <div class="panel-icon">
+                                 <img src="css/assets/icon_temperature_2@1x.png">
+                              </div>
+                              <div class="panel-name">
+                                 Сделать пол теплым во всей квартире
+                              </div>
+                              <div class="panel-status"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="box">
+               <div class="box-nav">
+                  <div class="label label-device">
+                     Избранные устройства
+                  </div>
+                  <div class="buttons">
+                     <button class="device-btn" type="button">
+                     Все
+                     </button>
+                     <button class="device-btn" type="button">
+                     Кухня
+                     </button>
+                     <button class="device-btn" type="button">	Зал
+                     </button>
+                     <button class="device-btn" type="button">
+                     Лампочки
+                     </button>
+                     <button class="device-btn" type="button">
+                     Камеры
+                     </button>
+                     <button class="device-btn group" type="button">
+                     Все<img src="css/assets/Icons/Arrow_Right/left@1x.png">
+                     </button>
+                  </div>
+                  <div class="device-arrows">
+                     <div class="arrow-left">
+                        <img src="css/assets/Icons/Arrow_Right/left@1x.png">
+                     </div>
+                     <div class="arrow-right">
+                        <img src="css/assets/Icons/Arrow_Right/left@1x.png">
+                     </div>
+                  </div>
+               </div>
+               <div class="box-content">
+                  <div class="device-set">
+                     <div class="device-slider">
+                        <button class="panel-device md-trigger" data-modal="modal-light">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_sun_2@2x.png">
+                           </div>
+                           <div class="panel-name">
+                              <a href="#window-light">Xiaomi Yeelight LED Smart Bulb</a>
+                           </div>
+                           <div class="panel-status">Включено</div>
+                        </button>
+                        <button class="panel-device md-trigger" data-modal="modal-floor">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_temperature_2@2x.png">
+                           </div>
+                           <div class="panel-name">
+                              <a href="#window-floor">Xiaomi Warm Floor</a>
+                           </div>
+                           <div class="panel-status">Включено</div>
+                        </button>
+                        <button class="panel-device md-trigger" data-modal="modal-temp">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_temperature@2x.png">
+                           </div>
+                           <div class="panel-name">
+                              <a href="#window-temp">Elgato Eve Degree Connected</a>
+                           </div>
+                           <div class="panel-status">Выключено до 17:00</div>
+                        </button>
+                        <button class="panel-device">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_sun@2x.png">
+                           </div>
+                           <div class="panel-name">D-Link Omna 180 Cam</div>
+                           <div class="panel-status">Включится в 17:00</div>
+                        </button>
+                        <button class="panel-device">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_sun@2x.png">
+                           </div>
+                           <div class="panel-name">LIFX Mini Day &amp; Dusk A60 E27</div>
+                           <div class="panel-status">Включится в 17:00</div>
+                        </button>
+                        <button class="panel-device">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_sun_2@2x.png">
+                           </div>
+                           <div class="panel-name">Xiaomi Mi Air Purifier 2S</div>
+                           <div class="panel-status">Включено</div>
+                        </button>
+                        <button class="panel-device">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_sun@2x.png">
+                           </div>
+                           <div class="panel-name">Philips Zhirui</div>
+                           <div class="panel-status">Включено</div>
+                        </button>
+                        <button class="panel-device">
+                           <div class="panel-icon">
+                              <img src="css/assets/icon_temperature_2@1x.png">
+                           </div>
+                           <div class="panel-name">Xiaomi Mi Air Purifier 2S</div>
+                           <div class="panel-status">Включено</div>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <footer>
+            <div id="footer-nav">
+               <div class="footer-li"><a href="#">Помощь</a></div>
+               <div class="footer-li"><a href="#">Обратная связь</a></div>
+               <div class="footer-li"><a href="#">Разработчикам</a></div>
+               <div class="footer-li"><a href="#">Условия использования</a></div>
+            </div>
+            <div class="footer-li copy"><a href="#">© 2001–2017  ООО «Яндекс»</a></div>
+         </footer>
+      </div>
+      <!--Основной контент-->
+      <div class="md-overlay"></div>
+      <!--анимация модальных окон-->
+      <script src="js/classie.js"></script>
+      <script src="js/modalEffects.js"></script>
+      <!--анимация клутилки-->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js'></script>
+      <script  src="js/floorControl.js"></script>
+   </body>
+</html>
